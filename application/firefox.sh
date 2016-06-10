@@ -15,6 +15,8 @@ set -e
 MOZ_LIBDIR=/usr/lib/firefox
 MOZ_APP_LAUNCHER=`which $0`
 MOZ_APP_NAME=firefox
+MOZ_DEFAULT_PROFILEDIR=.mozilla/firefox
+MOZ_PROFILEDIR=.mozilla/firefox
 
 export MOZ_APP_LAUNCHER
 
@@ -77,6 +79,7 @@ while [ $# -gt 0 ]; do
             ;;
     esac
 done
+
 
 if [ $moz_debug -eq 1 ] ; then
     case $moz_debugger in
