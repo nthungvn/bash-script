@@ -28,8 +28,9 @@ if [ $IS_VALUE = false ]; then
 	echo "Usage: $0 Filename StartRevision EndRevision OutputDiff [PrefixDelete]"
 	echo "\tFilename: File's name include list files"
 	echo "\tStartRevision: Start revision number"
-	echo "\tOutputDiff: File's name that output diff file when run 'hg diff'"
 	echo "\tEndRevision: End revsion number (Start < End)"
+	echo "\tOutputDiff: File's name that output diff file when run 'hg diff'"
+	echo "\tPrefix: Prefix string in 'Filename' will be ingore when generating command"
 	exit 0
 fi
 
