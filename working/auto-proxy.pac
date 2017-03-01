@@ -76,7 +76,7 @@ function FindProxyForURL(url, host)
 		return "PROXY improxy.tma.com.vn:8080";
 	}
 
-	if (shExpMatch(host, "*.threatstop.com") || shExpMatch(host, "*.tma.com.vn") || shExpMatch(host, "localhost*") || isInNet(host, "192.168.0.0", "255.255.0.0") || shExpMatch(host, "*.v1host.com") || shExpMatch(host, "*.xip.io")) {
+	if (shExpMatch(host, "*.threatstop.com") || shExpMatch(host, "*.tma.com.vn") || shExpMatch(host, "localhost*") || isInNet(host, "192.168.0.0", "255.255.0.0") || shExpMatch(host, "*.xip.io")) {
 		return "DIRECT";
 	}
 
