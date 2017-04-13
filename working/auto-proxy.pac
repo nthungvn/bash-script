@@ -28,7 +28,7 @@ function FindProxyForURL(url, host)
 	}
 	
 	// Music
-	if (shExpMatch(url, "*nhac.vn*") || shExpMatch(url, "*nhaccuatui.com*") || shExpMatch(host, "*.nixcdn.com") || shExpMatch(url, "*vegacdn.vn*")) {
+	if (shExpMatch(url, "*nhac.vn*") || shExpMatch(url, "*vegaid.vn") || shExpMatch(url, "*nhaccuatui.com*") || shExpMatch(host, "*.nixcdn.com") || shExpMatch(url, "*vegacdn.vn*") || shExpMatch(host, "*keeng.vn")) {
 		return tor;
 	}
 	
@@ -43,7 +43,7 @@ function FindProxyForURL(url, host)
 	}
 	
 	// Misc
-	if (shExpMatch(url, "*webtretho.com*") || shExpMatch(host, "*thegioididong.com") || shExpMatch(host, "*tgdd.vn") || shExpMatch(host, "*postimg.org") || shExpMatch(host, "*sourceforge.net")) {
+	if (shExpMatch(host, "*upload.youtube.com") || shExpMatch(url, "*webtretho.com*") || shExpMatch(host, "*thegioididong.com") || shExpMatch(host, "*tgdd.vn") || shExpMatch(host, "*postimg.org") || shExpMatch(host, "*sourceforge.net") || shExpMatch(host, "*cellphones.com.vn") || shExpMatch(host, "*dmx.vn") || shExpMatch(host, "*adf.ly")) {
 		return tor;
 	}
 	
@@ -73,7 +73,7 @@ function FindProxyForURL(url, host)
 	}
 	
 	if (shExpMatch(host, "*.skype.com") || shExpMatch(host, "*.skypeassets.com") || shExpMatch(host, "*.live.com") || shExpMatch(host, "*.trouter.io") || shExpMatch(host, "*.msecnd.net") || shExpMatch(host, "*.microsoft.com")) {
-		return "PROXY improxy.tma.com.vn:8080";
+		return "DIRECT";
 	}
 
 	if (shExpMatch(host, "*.threatstop.com") || shExpMatch(host, "*.tma.com.vn") || shExpMatch(host, "localhost*") || isInNet(host, "192.168.0.0", "255.255.0.0") || shExpMatch(host, "*.xip.io")) {
