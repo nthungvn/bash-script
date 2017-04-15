@@ -12,6 +12,7 @@ is_root() {
   fi
 }
 
+apt remove firefox
 # $1 is folder that content firefox binnary
 if [ -d $1/firefox ]; then
   cp firefox.sh $1/firefox
