@@ -23,8 +23,8 @@ if [ -d $1/firefox ]; then
   fi
   cd $1
   sudo mv firefox /usr/lib
-  if [ -f $HOME/Dropbox/Linux/firefox.desktop ]; then
-  	sudo cp $HOME/Dropbox/Linux/firefox.desktop /usr/share/applications/
+  if [ -f ./firefox.desktop ]; then
+  	sudo cp ./firefox.desktop /usr/share/applications/
   	is_root
   fi
   is_root
