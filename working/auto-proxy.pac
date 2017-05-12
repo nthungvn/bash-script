@@ -1,8 +1,8 @@
 function FindProxyForURL(url, host)
 {
-	var browsec = "SOCKS5 127.0.0.1:49736";
-    var direct = "DIRECT";
-    var tmaProxy = "PROXY 10.10.10.10:8080";
+	var browsec = "PROXY 127.0.0.1:49736";
+	var direct = "DIRECT";
+	var tmaProxy = "PROXY 10.10.10.10:8080";
 	
 	// Facebook
 	if (shExpMatch(host, "*facebook.com") || shExpMatch(host, "*.facebook.net") || shExpMatch(url, "*.facebook.com*") || shExpMatch(url, "*.facebook.net*") || shExpMatch(host, "*.fbcdn.net") || shExpMatch(host, "*.fbcdn.com") || shExpMatch(host, "*.fbsbx.com") || shExpMatch(url, "*fbsbx.com*") || shExpMatch(host, "*.fb.com") || shExpMatch(host, "*.fb.me") || shExpMatch(host, "*.tfbnw.net") || shExpMatch(host, "*.messenger.com") || shExpMatch(host, "*.akamaihd.net")) {
