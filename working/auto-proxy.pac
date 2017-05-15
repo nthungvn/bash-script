@@ -82,5 +82,9 @@ function FindProxyForURL(url, host)
 		return direct;
 	}
 
+	if (shExpMatch(host, "https:*")) {
+		return direct;
+	}
+
 	return tmaProxy;
 }
