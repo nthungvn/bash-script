@@ -3,6 +3,7 @@
 # Usage: This script will help you to remove all previous firefox's install and will install new firefox based on a path
 # you input
 # $1 Path to firefox package, it will be extract to approximate location
+# $1 is folder that content firefox binnary
 is_root() {
   # 1 is false and 0 is true
   if [ $? = 1 ]; then
@@ -12,8 +13,10 @@ is_root() {
   fi
 }
 
+# Remove firefox first
 apt remove firefox
-# $1 is folder that content firefox binnary
+
+# Install new firefox by package
 if [ -d $1/firefox ]; then
   cp firefox.sh $1/firefox
   ff_folder='/usr/lib/firefox'
@@ -23,10 +26,6 @@ if [ -d $1/firefox ]; then
   fi
   cd $1
   sudo mv firefox /usr/lib
-  if [ -f ./firefox.desktop ]; then
-  	sudo cp ./firefox.desktop /usr/share/applications/
-  	is_root
-  fi
   is_root
   if ! which firefox; then
     sudo ln -s $ff_folder/firefox.sh /usr/bin/firefox
@@ -38,3 +37,9 @@ else
   exit 1
 fi
 
+# Install shortcut to open application
+if [ -f ./firefox.desktop ]; then
+  sudo cp ./firefox.desktop /usr/share/applications/
+  echo "Install shortcut successfully"
+  is_root
+fi
