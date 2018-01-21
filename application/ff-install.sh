@@ -14,7 +14,7 @@ is_root() {
 }
 
 # Remove firefox first
-apt remove firefox
+sudo apt-get remove firefox
 
 # Install new firefox by package
 if [ -d $1/firefox ]; then
@@ -39,7 +39,7 @@ fi
 
 # Install shortcut to open application
 if [ -f ./firefox.desktop ]; then
-  sudo cp ./firefox.desktop /usr/share/applications/
+  sudo desktop-file-install ./firefox.desktop
   echo "Install shortcut successfully"
   is_root
 fi
