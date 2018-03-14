@@ -28,6 +28,10 @@ echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" | 
 wget -q -O - https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
 
+# spotify
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0DF731E45CE24F27EEEB1450EFDC8610341D9410
+echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+
 sudo apt update
 
 ### install
@@ -37,3 +41,4 @@ sudo apt-get install google-chrome-stable
 sudo apt-get install slack
 sudo apt-get install atom
 sudo apt-get install code
+sudo apt-get install spotify-client
