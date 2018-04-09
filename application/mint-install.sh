@@ -4,7 +4,6 @@ sudo apt-get install ttf-mscorefonts-installer
 sudo apt-get install dropbox nemo-dropbox
 sudo apt-get install git
 sudo apt-get install plank
-sudo apt-get install sublime-text
 sudo apt-get install kdiff3-qt
 sudo apt-get install nemo-compare
 # sudo apt-get install gparted
