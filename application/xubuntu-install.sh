@@ -1,3 +1,3 @@
 #! /bin/sh
 
-sudo apt-get install xfce4-time-out-plugin rhythmbox vlc
+sudo apt-get install xfce4-time-out-plugin rhythmbox vlc ibus ibus-m17n
