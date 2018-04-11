@@ -21,7 +21,9 @@ echo 'deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main' |
 echo 'deb https://download.sublimetext.com/ apt/stable/' | sudo tee /etc/apt/sources.list.d/sublime-text.list
 
 # teamviewer
-echo 'deb http://linux.teamviewer.com/deb preview tv13' | sudo tee /etc/apt/sources.list.d/teamviewer.list
+sudo cp ./teamviewer.repo/teamviewer.gpg /etc/apt/trusted.gpg.d/
+sudo cp ./teamviewer.repo/teamviewer.list /etc/apt/sources.list.d/
+#echo 'deb http://linux.teamviewer.com/deb preview tv13' | sudo tee /etc/apt/sources.list.d/teamviewer.list
 
 # atom
 wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
