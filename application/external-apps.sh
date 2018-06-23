@@ -21,8 +21,8 @@ echo 'deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main' |
 echo 'deb https://download.sublimetext.com/ apt/stable/' | sudo tee /etc/apt/sources.list.d/sublime-text.list
 
 # teamviewer
-sudo cp ./teamviewer.repo/teamviewer.gpg /etc/apt/trusted.gpg.d/
 sudo cp ./teamviewer.repo/teamviewer.list /etc/apt/sources.list.d/
+wget -O - https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | sudo apt-key add -
 #echo 'deb http://linux.teamviewer.com/deb preview tv13' | sudo tee /etc/apt/sources.list.d/teamviewer.list
 
 # atom
