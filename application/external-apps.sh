@@ -40,10 +40,10 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 sudo apt update
 
 ### install
-sudo apt-get install sublime-text
 sudo apt-get install skypeforlinux
 sudo apt-get install google-chrome-stable
-sudo apt-get install slack-desktop
-sudo apt-get install atom
 sudo apt-get install code
 sudo apt-get install spotify-client
+sudo apt-get install slack-desktop
+sudo apt-get install sublime-text
+sudo apt-get install atom
