@@ -37,7 +37,12 @@ echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0DF731E45CE24F27EEEB1450EFDC8610341D9410
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 
-sudo apt update
+# heroku
+sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
+wget -O - https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
+
+
+sudo apt-get update
 
 ### install
 sudo apt-get install skypeforlinux
@@ -47,3 +52,4 @@ sudo apt-get install spotify-client
 sudo apt-get install slack-desktop
 sudo apt-get install sublime-text
 sudo apt-get install atom
+sudo apt-get install heroku 
