@@ -41,15 +41,26 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
 wget -O - https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
 
+# slingscold and albert
+sudo add-apt-repository ppa:noobslab/macbuntu
+
+# numix icon and theme
+sudo add-apt-repository ppa:numix/ppa
+
 
 sudo apt-get update
 
 ### install
 sudo apt-get install skypeforlinux
 sudo apt-get install google-chrome-stable
+sudo apt-get install numix-gtk-theme numix-icon-theme-circle
+sudo apt-get install slingscold
 sudo apt-get install code
+sudo apt-get install sublime-text
+
+## optional package
 sudo apt-get install spotify-client
 sudo apt-get install slack-desktop
-sudo apt-get install sublime-text
 sudo apt-get install atom
-sudo apt-get install heroku 
+sudo apt-get install heroku
+sudo apt-get install albert
