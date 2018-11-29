@@ -47,6 +47,9 @@ sudo add-apt-repository ppa:noobslab/macbuntu
 # numix icon and theme
 sudo add-apt-repository ppa:numix/ppa
 
+# gnome-pie
+sudo add-apt-repository ppa:simonschneegans/testing
+
 
 sudo apt-get update
 
@@ -55,6 +58,7 @@ sudo apt-get install skypeforlinux
 sudo apt-get install google-chrome-stable
 sudo apt-get install numix-gtk-theme numix-icon-theme-circle
 sudo apt-get install slingscold
+sudo apt-get install gnome-pie
 sudo apt-get install code
 sudo apt-get install sublime-text
 
