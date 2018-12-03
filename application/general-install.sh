@@ -4,6 +4,8 @@ sudo apt-get install ttf-mscorefonts-installer
 sudo apt-get install git
 sudo apt-get install plank
 sudo apt-get install kdiff3-qt
+sudo apt-get install redshift
+sudo apt-get install goldendict
 sudo apt-get install python-qt4 # Only need to run Git-cola
 # sudo apt-get install gparted
 # sudo apt-get install build-essential

@@ -43,3 +43,4 @@ if [ -f ./firefox.desktop ]; then
   echo "Install shortcut successfully"
   is_root
 fi
+# https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US
