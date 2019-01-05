@@ -41,6 +41,10 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
 wget -O - https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
 
+# opera
+sudo add-apt-repository 'deb https://deb.opera.com/opera-stable/ stable non-free'
+wget -qO- https://deb.opera.com/archive.key | sudo apt-key add -
+
 # slingscold and albert
 sudo add-apt-repository ppa:noobslab/macbuntu
 
@@ -63,8 +67,11 @@ sudo apt-get install code
 sudo apt-get install sublime-text
 
 ## optional package
+sudo apt-get install teamviewer
 sudo apt-get install spotify-client
 sudo apt-get install slack-desktop
 sudo apt-get install atom
 sudo apt-get install heroku
 sudo apt-get install albert
+sudo apt-get install opera-stable # Don't need to add repository when apt asked
+
