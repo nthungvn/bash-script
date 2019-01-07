@@ -45,6 +45,10 @@ wget -O - https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
 sudo add-apt-repository 'deb https://deb.opera.com/opera-stable/ stable non-free'
 wget -qO- https://deb.opera.com/archive.key | sudo apt-key add -
 
+# doublecmd
+wget -qO - https://download.opensuse.org/repositories/home:Alexx2000/xUbuntu_18.04/Release.key | sudo apt-key add -
+echo 'deb http://download.opensuse.org/repositories/home:/Alexx2000/xUbuntu_18.04/ /' | sudo tee /etc/apt/sources.list.d/home:Alexx2000.list
+
 # slingscold and albert
 sudo add-apt-repository ppa:noobslab/macbuntu
 
@@ -74,4 +78,4 @@ sudo apt-get install atom
 sudo apt-get install heroku
 sudo apt-get install albert
 sudo apt-get install opera-stable # Don't need to add repository when apt asked
-
+sudo apt-get install doublecmd-gtk
