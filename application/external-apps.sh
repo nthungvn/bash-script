@@ -13,6 +13,9 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 wget -qO - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 
+# chrome remote desktop
+echo 'deb [arch=amd64] http://dl.google.com/linux/chrome-remote-desktop/deb/ stable main' | sudo tee /etc/apt/sources.list.d/chrome-remote-desktop.list
+
 # slack
 wget -qO - https://packagecloud.io/slacktechnologies/slack/gpgkey | sudo apt-key add -
 echo 'deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main' | sudo tee /etc/apt/sources.list.d/slack.list
@@ -79,3 +82,5 @@ sudo apt-get install heroku
 sudo apt-get install albert
 sudo apt-get install opera-stable # Don't need to add repository when apt asked
 sudo apt-get install doublecmd-gtk
+sudo apt-get install chrome-remote-desktop # Start services: sudo /etc/init.d/chrome-remote-desktop start
+
