@@ -24,7 +24,7 @@ echo 'deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main' |
 echo 'deb https://download.sublimetext.com/ apt/stable/' | sudo tee /etc/apt/sources.list.d/sublime-text.list
 
 # teamviewer
-sudo cp ./teamviewer.repo/teamviewer.list /etc/apt/sources.list.d/
+sudo cp ./resources/repos/teamviewer.repo/teamviewer.list /etc/apt/sources.list.d/
 wget -O - https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | sudo apt-key add -
 #echo 'deb http://linux.teamviewer.com/deb preview tv13' | sudo tee /etc/apt/sources.list.d/teamviewer.list
 
@@ -37,7 +37,8 @@ wget -qO - https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add 
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
 
 # spotify
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0DF731E45CE24F27EEEB1450EFDC8610341D9410
+# If they public is changed, update here: https://www.spotify.com/de/download/linux/
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 
 # heroku

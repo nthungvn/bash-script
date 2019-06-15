@@ -25,7 +25,7 @@ fi
 
 # Install new firefox by package
 if [ -d $source/firefox ]; then
-	cp firefox.sh $source/firefox
+	cp resources/exec/firefox.sh $source/firefox
 	ff_folder='/usr/lib/firefox'
 	if [ -d $ff_folder ]; then
 		sudo rm -f -r $ff_folder
@@ -46,7 +46,7 @@ fi
 
 # Install shortcut to open application
 if [ -f ./firefox.desktop ]; then
-	sudo desktop-file-install ./firefox.desktop
+	sudo desktop-file-install ./resources/appicons/firefox.desktop
 	echo "Install shortcut successfully"
 	is_root
 fi
