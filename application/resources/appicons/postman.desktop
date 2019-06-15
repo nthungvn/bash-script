@@ -1,0 +1,9 @@
+[Desktop Entry]
+Comment=REST Client
+Terminal=false
+Name=Postman
+Exec=/home/nthung/Applications/Postman/Postman
+Type=Application
+Icon=/home/nthung/Applications/Postman/app/resources/app/assets/icon.png
+Name[en_US]=Postman
+Categories=Network
