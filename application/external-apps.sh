@@ -60,7 +60,8 @@ sudo add-apt-repository ppa:noobslab/macbuntu
 sudo add-apt-repository ppa:numix/ppa
 
 # gnome-pie
-sudo add-apt-repository ppa:simonschneegans/testing
+# Due to this package already supported from official Ubuntu
+#sudo add-apt-repository ppa:simonschneegans/testing
 
 
 sudo apt-get update
