@@ -7,6 +7,7 @@ sudo apt-get install -y redshift
 sudo apt-get install -y ttf-mscorefonts-installer
 sudo apt-get install -y gparted
 sudo apt-get install -y baobab # Disk Usage Analyser
+sudo apt-get install -y openjdk-11-jdk-headless
 # sudo apt-get install -y remmina
 # sudo apt-get install -y gnome-sound-recorder
 # sudo apt-get install -y kazam
