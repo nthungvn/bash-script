@@ -3,7 +3,7 @@
 sudo apt-get install -y git
 sudo apt-get install -y plank goldendict
 sudo apt-get install -y kdiff3-qt
-sudo apt-get install -y redshift
+sudo apt-get install -y redshift-gtk
 sudo apt-get install -y ttf-mscorefonts-installer
 sudo apt-get install -y gparted
 sudo apt-get install -y baobab # Disk Usage Analyser
