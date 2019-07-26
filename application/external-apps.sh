@@ -20,9 +20,6 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome-remote-desktop/deb/ sta
 wget -qO - https://packagecloud.io/slacktechnologies/slack/gpgkey | sudo apt-key add -
 echo 'deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main' | sudo tee /etc/apt/sources.list.d/slack.list
 
-# sublime-text
-echo 'deb https://download.sublimetext.com/ apt/stable/' | sudo tee /etc/apt/sources.list.d/sublime-text.list
-
 # teamviewer
 sudo cp ./resources/repos/teamviewer.repo/teamviewer.list /etc/apt/sources.list.d/
 wget -O - https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | sudo apt-key add -
@@ -61,28 +58,28 @@ sudo add-apt-repository ppa:numix/ppa
 
 # gnome-pie
 # Due to this package already supported from official Ubuntu
-#sudo add-apt-repository ppa:simonschneegans/testing
+# sudo add-apt-repository ppa:simonschneegans/testing
 
 
-sudo apt-get update
+# sudo apt-get update
 
 ### install
-sudo apt-get install skypeforlinux
-sudo apt-get install google-chrome-stable
-sudo apt-get install numix-gtk-theme numix-icon-theme-circle
-sudo apt-get install slingscold
-sudo apt-get install gnome-pie
-sudo apt-get install code
-sudo apt-get install sublime-text
+sudo apt-get install -y skypeforlinux
+sudo apt-get install -y google-chrome-stable
+sudo apt-get install -y numix-gtk-theme numix-icon-theme-circle
+sudo apt-get install -y slingscold
+sudo apt-get install -y gnome-pie
+sudo apt-get install -y code
+sudo apt-get install -y sublime-text
+sudo apt-get install -y doublecmd-gtk
+sudo apt-get install -y spotify-client
 
 ## optional package
-sudo apt-get install teamviewer
-sudo apt-get install spotify-client
-sudo apt-get install slack-desktop
-sudo apt-get install atom
-sudo apt-get install heroku
-sudo apt-get install albert
-sudo apt-get install opera-stable # Don't need to add repository when apt asked
-sudo apt-get install doublecmd-gtk
-sudo apt-get install chrome-remote-desktop # Start services: sudo /etc/init.d/chrome-remote-desktop start
+# sudo apt-get install -y teamviewer
+# sudo apt-get install -y slack-desktop
+# sudo apt-get install -y atom
+# sudo apt-get install -y heroku
+# sudo apt-get install -y albert
+# sudo apt-get install -y opera-stable # Don't need to add repository when apt asked
+# sudo apt-get install -y chrome-remote-desktop # Start services: sudo /etc/init.d/chrome-remote-desktop start
 
