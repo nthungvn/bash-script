@@ -10,7 +10,7 @@ for i in $(seq 1 $max); do
     if [ -x "$(command -v curl)" ]; then
         curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -
     else
-        if [ -x "$(command -v curl)" ]; then
+        if [ -x "$(command -v wget)" ]; then
             wget -qO - https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -
         else
             echo "Couln't found curl or wget command"
