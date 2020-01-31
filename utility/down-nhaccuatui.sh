@@ -14,7 +14,7 @@ echo "`wc -l playlist`s"
 
 function get_name() {
 	ORIGINAL_NAME=$1
-	REGEX="([a-zA-Z://\._0-9\-]*)/([a-zA-Z0-9\-]*).mp3"
+	REGEX="([a-zA-Z://\._0-9\-]*)/([a-zA-Z0-9\-]*)\.mp3"
 	if [[ $ORIGINAL_NAME =~ $REGEX ]]; then
 		echo "${BASH_REMATCH[2]}.mp3"
 	else

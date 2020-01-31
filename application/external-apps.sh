@@ -50,6 +50,10 @@ wget -qO- https://deb.opera.com/archive.key | sudo apt-key add -
 wget -qO - https://download.opensuse.org/repositories/home:Alexx2000/xUbuntu_18.04/Release.key | sudo apt-key add -
 echo 'deb http://download.opensuse.org/repositories/home:/Alexx2000/xUbuntu_18.04/ /' | sudo tee /etc/apt/sources.list.d/home:Alexx2000.list
 
+# gitblade
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6ECD108C66165FE8
+sudo add-apt-repository 'deb https://gitblade.com/ppa ./'
+
 # slingscold and albert
 sudo add-apt-repository ppa:noobslab/macbuntu
 
@@ -82,4 +86,5 @@ sudo apt-get install -y spotify-client
 # sudo apt-get install -y albert
 # sudo apt-get install -y opera-stable # Don't need to add repository when apt asked
 # sudo apt-get install -y chrome-remote-desktop # Start services: sudo /etc/init.d/chrome-remote-desktop start
+# sudo apt install -y gitblade
 
