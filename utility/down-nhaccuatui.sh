@@ -10,10 +10,22 @@ cat xml* | grep .mp3 | tr -d ' ' | sed 's/CDATA//g' | tr -d '[]' | sed 's/^<!//g
 # We count number of music file in the list
 echo "`wc -l playlist`s"
 
+function get_name() {
+	ORIGINAL_NAME=$1
+	REGEX="([a-zA-Z://\._0-9\-]*)/([a-zA-Z0-9\-]*).mp3"
+	if [[ $ORIGINAL_NAME =~ $REGEX ]]; then
+		echo "${BASH_REMATCH[2]}.mp3"
+	else
+		echo $ORIGINAL_NAME
+	fi
+}
+
 # We download the playlist to our disk
 for MUSIC in `cat playlist`
 do
-	wget $MUSIC
+	SHORT_NAME=`get_name $MUSIC`
+	# echo $SHORT_NAME
+	wget $MUSIC -O $SHORT_NAME
 done
 
 # We remove all temp files
