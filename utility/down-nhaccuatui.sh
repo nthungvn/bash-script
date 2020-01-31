@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # We download the link content actually link to playlist
 wget -q $1
 
