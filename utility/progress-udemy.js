@@ -1,17 +1,38 @@
-const checkboxesSelector =
-  '.main-content-wrapper > .main-content .app--sidebar-column--2t0E8 section ul input[type="checkbox"';
 let checkboxes = [];
 let unFinishedLectures = [];
+let finishLectures = [];
 
-checkboxes = document.querySelectorAll(checkboxesSelector);
-unFinishedLectures = [];
+checkboxes = document.querySelectorAll('.ud-main-content-wrapper > .ud-main-content .app--column-container--42JNg section ul input[type="checkbox"');
+
+// // Check Done
+// unFinishedLectures = [];
+// checkboxes.forEach((lecture) => {
+//   if (!lecture.checked) {
+//     unFinishedLectures.push(lecture);
+//   }
+// });
+// unFinishedLectures.forEach((item) => {
+//   item.parentElement.classList.remove('ud-toggle-input-disabled');
+//   item.disabled = false;
+// });
+// unFinishedLectures.forEach((item, index) =>
+//   setTimeout(() => {
+//     item.click();
+//   }, index * 50)
+// );
+
+// Check Un Done
+finishLectures = [];
 checkboxes.forEach((lecture) => {
-  if (!lecture.checked) {
-    unFinishedLectures.push(lecture);
+  if (lecture.checked) {
+    finishLectures.push(lecture);
   }
 });
-unFinishedLectures.forEach((item) => (item.disabled = false));
-unFinishedLectures.forEach((item, index) =>
+finishLectures.forEach((item) => {
+  item.parentElement.classList.remove('ud-toggle-input-disabled');
+  item.disabled = false;
+});
+finishLectures.forEach((item, index) =>
   setTimeout(() => {
     item.click();
   }, index * 50)
