@@ -26,6 +26,7 @@ eval "$(/usr/local/bin/brew shellenv)"
 
 
 # Install the cli of VSCode: https://code.visualstudio.com/docs/setup/mac#_install-vs-code-on-macos
+# Press Cmd + Shift + P, search Install 'code' command to PATH
 
 # Install SDKman, Installation: https://sdkman.io/install, Usage: https://sdkman.io/usage
 curl -s "https://get.sdkman.io" | bash
