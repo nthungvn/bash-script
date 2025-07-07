@@ -5,6 +5,16 @@
 # For more details, please visit https://support.apple.com/kb/HT208050.
 chsh -s /bin/zsh
 
+# Install Google Chrome
+# Go to https://www.google.com/chrome/ and scroll down to the bottom and/or find the Other Platforms
+# from here, you can find the version for MacOS Mojave 10.14 or MacOS Catalina 10.15
+
+# After install the warning message will be display, can suppress by running the command
+defaults write com.google.Chrome SuppressUnsupportedOSWarning -bool true
+
+# But the chrome now will be show the warning: Managed by organization, only solution to unset the policy
+defaults delete com.google.Chrome SuppressUnsupportedOSWarning
+
 # Install Xcode cli, this will include git tool
 xcode-select --install
 
@@ -43,3 +53,4 @@ sdk default java 11.0.27-zulu
 sdk current java
 
 sdk install maven 3.8.3
+
