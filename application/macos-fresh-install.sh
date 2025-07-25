@@ -18,15 +18,31 @@ defaults delete com.google.Chrome SuppressUnsupportedOSWarning
 # Install Xcode cli, this will include git tool
 xcode-select --install
 
+# Copy the ssh from other machine disk
+mkdir -p ~/.ssh
+cp /Volumes/Macintosh\ HD/Users/nthung/.ssh/id_ed25519 ~/.ssh
+cp /Volumes/Macintosh\ HD/Users/nthung/.ssh/id_ed25519.pub ~/.ssh
+cp /Volumes/Macintosh\ HD/Users/nthung/.ssh/id_rsa ~/.ssh
+cp /Volumes/Macintosh\ HD/Users/nthung/.ssh/id_rsa.pub ~/.ssh
+
+chmod 400 ~/.ssh/id_*
+
+git clone git@bitbucket.org:nthungvlvn/home-mac.git
+
 # Install brew as the package manager
 # https://brew.sh/
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Additional step after brew installation
+# Older MacOS: Additional step after brew installation
 echo >> /Users/nthung/.bash_profile
 echo 'eval "$(/usr/local/bin/brew shellenv)"' >> /Users/nthung/.bash_profile
 eval "$(/usr/local/bin/brew shellenv)"
+
+# Newer MacOS: Additional step after brew installation
+echo >> /Users/nthung/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/nthung/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Install VSCode, find the old version if the OS is running the version Catalina or prior:
 # Find the latest version supported Catalina: https://github.com/microsoft/vscode/issues/242842
