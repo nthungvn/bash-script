@@ -28,6 +28,7 @@ cp /Volumes/Macintosh\ HD/Users/nthung/.ssh/id_rsa.pub ~/.ssh
 chmod 400 ~/.ssh/id_*
 
 git clone git@bitbucket.org:nthungvlvn/home-mac.git
+# Continue on the command.sh file in the home-mac directory
 
 # Install brew as the package manager
 # https://brew.sh/
